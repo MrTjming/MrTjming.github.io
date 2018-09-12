@@ -200,7 +200,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a>
+                        <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a>
                     </div>
                 </section>
                 
@@ -276,6 +276,160 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-automateDeploymentInGithub" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/09/12/automateDeploymentInGithub/" class="article-date">
+      <time datetime="2018-09-12T08:36:02.000Z" itemprop="datePublished">2018-09-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/09/12/automateDeploymentInGithub/">对GitHub的项目自动部署</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="有关部署"><a href="#有关部署" class="headerlink" title="有关部署"></a>有关部署</h1><h2 id="什么是部署"><a href="#什么是部署" class="headerlink" title="什么是部署"></a>什么是部署</h2><p>要将一个项目的源代码运行起来需要可能需要对服务器进行各种设置，</p>
+<h2 id="为什么要使用自动部署"><a href="#为什么要使用自动部署" class="headerlink" title="为什么要使用自动部署"></a>为什么要使用自动部署</h2><p>每次往GitHub更新代码的时候，我们都很难看到代码实际的工作效果。</p>
+<p>## </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Learn/">Learn</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/部署/">部署</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexoBlog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/09/12/hexoBlog/" class="article-date">
+      <time datetime="2018-09-12T07:59:12.000Z" itemprop="datePublished">2018-09-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/09/12/hexoBlog/">关于Hexo博客的搭建与使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h1><p>Hexo是一个基于Vue.js的静态页面生成框架，可以轻松在GitHub Pages里部署博客。</p>
+<h1 id="Hexo环境搭建"><a href="#Hexo环境搭建" class="headerlink" title="Hexo环境搭建"></a>Hexo环境搭建</h1><h2 id="Node-js的安装"><a href="#Node-js的安装" class="headerlink" title="Node.js的安装"></a>Node.js的安装</h2><p>直接在<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>的官网里找到适合自己系统的安装包安装即可。</p>
+<h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><p>在<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>的官网里找到适应版本安装即可，安装后，将GitHub的ssh Key填入git的相关设置</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装Node.js后，在命令行里执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建一个Blog"><a href="#创建一个Blog" class="headerlink" title="创建一个Blog"></a>创建一个Blog</h2><p>创建一个用于存放Blog的目录，在命令行里进入它，执行下面的语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder\&gt;  </span><br><span class="line"><span class="built_in">cd</span> &lt;folder\&gt;  </span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p>其中\<folder>是你的Blog的项目名称</folder></p>
+<h1 id="Hexo项目的一些文件-夹"><a href="#Hexo项目的一些文件-夹" class="headerlink" title="Hexo项目的一些文件(夹)"></a>Hexo项目的一些文件(夹)</h1><h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>在项目根目录下的_config.yml的是配置文件，在这个文件里有一些关于项目的设置</p>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>应用程序的信息</p>
+<h2 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h2><p>这是模版文件夹。新建文章时，Hexo 会根据 scaffold 来建立对应的md文件。<br>Hexo的模板是指在新建的文章中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
+<h2 id="source"><a href="#source" class="headerlink" title="source"></a>source</h2><p>资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。</p>
+<h2 id="public"><a href="#public" class="headerlink" title="public"></a>public</h2><p>Markdown 和 HTML 文件会被解析并放到 public 文件夹。</p>
+<h2 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h2><p>用于存放主题文件，在_config.yml里可设置使用的主题</p>
+<h1 id="如何写博文"><a href="#如何写博文" class="headerlink" title="如何写博文"></a>如何写博文</h1><h2 id="怎样新建一篇文章"><a href="#怎样新建一篇文章" class="headerlink" title="怎样新建一篇文章"></a>怎样新建一篇文章</h2><p>在命令行里进入项目的根目录，执行下面的语句</p>
+<blockquote>
+<p>hexo n &lt;passageName>  </p>
+</blockquote>
+<p>其中，passageName将被设置为新博文的md文件名及博文标题。<br>在/source/_posts/目录下找到刚刚新建的md文件，直接在该文件里编辑博文内容即可。  </p>
+<h1 id="如何将本地博客部署在GitHub-Pages"><a href="#如何将本地博客部署在GitHub-Pages" class="headerlink" title="如何将本地博客部署在GitHub Pages"></a>如何将本地博客部署在GitHub Pages</h1><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>在_config.yml里填写如下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: http://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git #部署工具</span><br><span class="line">  repository: git@github.com:MrTjming/MrTjming.github.io.git #SSH链接</span><br><span class="line">  branch: master #分支</span><br></pre></td></tr></table></figure>
+<h2 id="生成静态文件并推送至GitHub"><a href="#生成静态文件并推送至GitHub" class="headerlink" title="生成静态文件并推送至GitHub"></a>生成静态文件并推送至GitHub</h2><p>在Blog项目的根目录下执行如下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g <span class="comment">#generate </span></span><br><span class="line">hexo d <span class="comment">#deploy</span></span><br></pre></td></tr></table></figure></p>
+<p>即可将本地的Blog部署到GitHub</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Learn/">Learn</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客搭建/">博客搭建</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-openSource" class="article article-type-post" itemscope itemprop="blogPost">
   
