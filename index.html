@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a>
+                        <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/nextClould/" style="font-size: 10px;">nextClould</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a>
                     </div>
                 </section>
                 
@@ -272,6 +272,195 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-nextClouldInstall" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/21/nextClouldInstall/" class="article-date">
+      <time datetime="2018-10-21T00:43:20.000Z" itemprop="datePublished">2018-10-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/21/nextClouldInstall/">个人网盘nextClould部署</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="一、-安装Apache2"><a href="#一、-安装Apache2" class="headerlink" title="一、 安装Apache2"></a>一、 安装Apache2</h2><p><code>sudo apt-get install apache2</code><br>安装完成后，浏览器访问:<a href="http://ipAddr/，出现It" target="_blank" rel="noopener">http://ipAddr/，出现It</a> works!网页表示安装成功。</p>
+<p>修改状态：<code>service apache2 status|start|stop|restart</code><br>站点目录：/var/www/<br>修改权限：sudo chmod 777 /var/www<br>安装目录：/etc/apache2/<br>全局配置：/etc/apache2/apache2.conf<br>监听端口：/etc/apache2/ports.conf<br>虚拟主机：/etc/apache2/sites-enabled/000-default.conf</p>
+<h2 id="二、安装MariaDB"><a href="#二、安装MariaDB" class="headerlink" title="二、安装MariaDB"></a>二、安装MariaDB</h2><p><code>sudo apt-get install mariadb-server mariadb-client</code><br>启动MariaDB服务：<code>sudo systemctl start mysql</code><br>查看状态：<code>sudo systemctl status mysql</code><br>重启服务：<code>service mysql restart</code><br>查看监听端口的情况：<code>netstat -tunpl</code> 或 <code>netstat -tap</code><br>执行初始化安全脚本，默认root密码为空，设置root密码和其他选项：<code>sudo mysql_secure_installation</code><br>为NextCloud创建数据库和用户<br>创建数据库nextcloud，用户名nextcloud，密码XXXXXXXX</p>
+<p><code>sudo mysql -u root -p</code><br>进入MariaDB后，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#创建数据库，名为：nextcloud</span><br><span class="line">CREATE DATABASE nextcloud;</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON nextcloud.* TO &apos;nextcloud&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;XXXXXXXX&apos;;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line">#退出</span><br><span class="line">\q</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、安装PHP及其他模块"><a href="#三、安装PHP及其他模块" class="headerlink" title="三、安装PHP及其他模块"></a>三、安装PHP及其他模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.2</span><br><span class="line"></span><br><span class="line">sudo apt-get install apache2 mariadb-server libapache2-mod-php7.2</span><br><span class="line">sudo apt-get install php7.2-gd php7.2-json php7.2-mysql php7.2-curl php7.2-mbstring</span><br><span class="line">sudo apt-get install php7.2-intl php7.2-mcrypt php-imagick php7.2-xml php7.2-zip</span><br></pre></td></tr></table></figure>
+<p>测试：<code>php7.2 -v</code><br>重启服务：<code>service apache2 restart</code><br>测试Apache能否解析PHP<br>执行<code>sudo nano /var/www/html/phpinfo.php</code><br>文件中写：&lt;?php echo phpinfo();?&gt;<br>浏览器访问:<a href="http://ipAddr/phpinfo.php" target="_blank" rel="noopener">http://ipAddr/phpinfo.php</a>  出现PHP Version网页</p>
+<h2 id="四、安装phpMyAdmin"><a href="#四、安装phpMyAdmin" class="headerlink" title="四、安装phpMyAdmin"></a>四、安装phpMyAdmin</h2><p><code>sudo apt-get install phpmyadmin</code><br>安装：选择apache2，点击确定。下一步选择是要配置数据库，并输入密码。<br>创建phpMyAdmin快捷方式：<code>sudo ln -s /usr/share/phpmyadmin /var/www/html</code><br>启用Apache mod_rewrite模块：<code>sudo a2enmod rewrite</code><br>重启服务：<code>service php7.2-fpm restart &amp; service apache2 restart</code><br>测试：浏览器访问:<a href="http://ipAddr/phpmyadmin" target="_blank" rel="noopener">http://ipAddr/phpmyadmin</a></p>
+<h2 id="五、配置Apache"><a href="#五、配置Apache" class="headerlink" title="五、配置Apache"></a>五、配置Apache</h2><p><code>nano /etc/apache2/apache2.conf</code><br>在最后面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-httpd-php .php .htm .html</span><br><span class="line">AddDefaultCharset UTF-8</span><br></pre></td></tr></table></figure></p>
+<p>然后重启Apache服务。<br>　　到此为止，web站点其实已经搭建起来了，只需在/var/www/html目录下存放网页文件，电脑主机就可以访问服务器了，<a href="http://ip/xxx.html" target="_blank" rel="noopener">http://ip/xxx.html</a></p>
+<h2 id="六、下载nextcloud"><a href="#六、下载nextcloud" class="headerlink" title="六、下载nextcloud"></a>六、下载nextcloud</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html</span><br><span class="line">wget https://download.nextcloud.com/server/releases/nextcloud-13.0.5.zip</span><br><span class="line">unzip nextcloud-13.0.5.zip</span><br><span class="line">rm nextcloud-13.0.5.zip</span><br></pre></td></tr></table></figure>
+<p>接下来只需要在电脑主机的浏览器上输入:<a href="http://ip/nextcloud" target="_blank" rel="noopener">http://ip/nextcloud</a> 就可以正常访问了。</p>
+<h2 id="七、可能遇到的问题"><a href="#七、可能遇到的问题" class="headerlink" title="七、可能遇到的问题"></a>七、可能遇到的问题</h2><p>1.缺少权限<br>如果出现下面的画面，说明你没有给nextcloud目录权限：</p>
+<p>缺少权限</p>
+<p>解决方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html</span><br><span class="line">chown www-data nextcloud -Rf</span><br><span class="line">chmod 770 nextcloud -Rf</span><br></pre></td></tr></table></figure></p>
+<p>2.刷新浏览器出现：<br>PHP cURL模块未安装<br>解决方法：</p>
+<p><code>sudo apt-get install libcurl3 php7.2-curl</code></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nextClould/">nextClould</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Hadoop" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/20/Hadoop/" class="article-date">
+      <time datetime="2018-10-20T08:13:10.000Z" itemprop="datePublished">2018-10-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/20/Hadoop/">Hadoop简单使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="一-环境安装与配置"><a href="#一-环境安装与配置" class="headerlink" title="一.环境安装与配置"></a>一.环境安装与配置</h1><ol>
+<li>安装VM虚拟机</li>
+<li>在VM虚拟机里安装Ubuntu server版本,本教程使用ubuntu 18.10 server</li>
+<li>启用root用户<br>装完Ubuntu后进入,用新用户登录,并执行命令<code>sudo passwd root</code>,设置root用户密码.<br>执行<code>logout</code>注销当前用户,用root账户登录</li>
+<li>关闭防火墙<br><code>ufw diable</code></li>
+<li>卸载iptables组件<br><code>apt-get remove iptables</code></li>
+<li>下载安装VIM<br><code>apt-get install vim</code></li>
+</ol>
+<h1 id="二-SSH连接配置"><a href="#二-SSH连接配置" class="headerlink" title="二.SSH连接配置"></a>二.SSH连接配置</h1><p>Linux远程连接需求:<br>1.Linux有ssh服务<br>2.需要使用SSH客户端工具</p>
+<ol>
+<li>安装SSH工具<br><code>apt-get install openssh-server</code></li>
+<li>启动SSH服务<br><code>/etc/init.d/ssh /start</code><br>注意:查看进程是否启动指定服务<code>ps -e | grep sshd</code></li>
+<li>设置允许root登录<br><code>vim /etc/ssh/sshd_config</code><br>找到PermitRootLogin 将其值设为yes<br><code>PermitRootLogin yes</code><br>执行<code>sudo service ssh restart</code>重启服务</li>
+<li>使用SSH连接工具连接<br><code>ifconfig</code> 查看当前IP<br>使用SecureCRT或Putty连接</li>
+</ol>
+<h1 id="三-配置FTP服务"><a href="#三-配置FTP服务" class="headerlink" title="三.配置FTP服务"></a>三.配置FTP服务</h1><p>使用FTP方便文件互相传输</p>
+<ol>
+<li>安装vsftpd服务组件<br><code>apt-get install vsftpd</code></li>
+<li>修改ftp用户的密码<br>上述安装完成后,最自动为系统创建一个叫ftp的用户<br><code>passwd ftp</code></li>
+<li>设置ftp目录的权限<br>vsftpd安装完成后,会自动创建一个/srv/ftp的目录<br><code>cd /srv/ftp</code><br><code>chmod 777 /srv/ftp</code></li>
+<li>修改配置文件<br><code>vim /etc/vsftpd.conf</code><br> 0)设置允许写的权限<pre><code>write_enable=YES
+</code></pre> 1)设置不允许匿名登录<pre><code>anonymous_enable=NO
+</code></pre> 2)允许本地用户登录<pre><code>local_enable=YES
+</code></pre> 3)是否将所有用户的限制在主目录<pre><code>chroot_local_user=YES
+</code></pre> 4)是否启动限制用户名单<pre><code>chroot_list_enable=YES
+</code></pre> 5)定义名单设置的目录(方便管理大的账号列表)<pre><code>chroot_list_file=/etc/vsftpd.chroot_list
+</code></pre> 6)增加服务配置<pre><code>pam_service_name=vsftpd
+</code></pre></li>
+<li>新建vsftpd.chroot_list文件<br><code>vim /etc/vsftpd.chroot_list</code><br>在文件里写入访问的用户名ftp,保存退出</li>
+<li>修改/etc/pam.d/vsftpd<br><code>vim /etc/pam.d/vsftpd</code><br>注释掉最后一行<br><code># auth  required        pam_shells.so</code></li>
+<li>启动vsftpd服务<br><code>service vsftpd start</code><br>注意:重启 <code>service vsftpd restart</code></li>
+<li>客户端连接<br>推荐FileZilla<br>IP地址:ifconfig查看<br>账号:ftp<br>密码是之前设置的<br>端口:21</li>
+</ol>
+<h1 id="四-JDK的安装与配置"><a href="#四-JDK的安装与配置" class="headerlink" title="四.JDK的安装与配置"></a>四.JDK的安装与配置</h1><p>Hadoop本质是Java.</p>
+<ol>
+<li>下载JDK (下载for linux的.tar.gz)<br>1)在官网下载,使用FTP上传<br>2)使用wget下载</li>
+<li>解压缩JDK<br><code>tar xzvf jdk-name-***.tar.gz -C /usr/local</code><br>解压至-C后面的目录</li>
+<li>文件夹改名(可选)<br>进入解压后的目录<br><code>cd /usr/local</code><br>将文件名改短<br><code>mv jdk***/ jdk</code></li>
+<li>配置环境文件<br><code>vim /etc/profile</code><br>打开后进入最下面配置<br><code>export JAVA_HOME=/usr/local/jdk</code><br><code>export PATH=$PATH:$JAVA_HOME/bin:</code><br><code>export CLASS_PATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</code></li>
+<li>使配置立即生效<br><code>source /etc/profile</code></li>
+<li>测试JDK<br>执行<code>java</code> 或 <code>javac</code> 看是否出错</li>
+</ol>
+<h1 id="五-安装Hadoop"><a href="#五-安装Hadoop" class="headerlink" title="五.安装Hadoop"></a>五.安装Hadoop</h1><ol>
+<li>下载Hadoop并用FTP上传<br>在<a href="http://www.apache.org找到Hadoop下载" target="_blank" rel="noopener">www.apache.org找到Hadoop下载</a></li>
+<li>解压Hadoop<br><code>tar xzvf hadoop***.tar.gz -C /usr/local</code></li>
+<li>重命名(可选)<br>进入解压后的目录<br><code>cd /usr/local</code><br>将文件名改短<br><code>mv hadoop***/ hadoop</code></li>
+<li>配置环境文件<br><code>vim /etc/profile</code><br>打开后进入最下面配置<br><code>export HADOOP_HOME=/usr/local/hadoop</code><br><code>export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME:/sbin:</code></li>
+<li>使配置立即生效<br><code>source /etc/profile</code></li>
+<li>在hadoop的资源文件定义要使用的jdk<br>路径 /usr/local/hadoop/etc/hadoop/hadoop-env.sh<br>修改下面的内容<br>export JAVA_HOME=/usr/local/jdk</li>
+<li>使用测试程序测序hadoop环境<br>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code></li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-mysql8Install" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -852,161 +1041,6 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/09/11/hello-world/" class="article-date">
-      <time datetime="2018-09-11T11:17:31.248Z" itemprop="datePublished">2018-09-11</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/09/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Learn/">Learn</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-HTTPTheDefinitiveGuide" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/09/08/HTTPTheDefinitiveGuide/" class="article-date">
-      <time datetime="2018-09-08T15:45:56.000Z" itemprop="datePublished">2018-09-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/09/08/HTTPTheDefinitiveGuide/">HTTP权威指南</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="书籍简介"><a href="#书籍简介" class="headerlink" title="书籍简介"></a>书籍简介</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>超文本转移协议（Hypertext Transfer Protocol，HTTP）是在万维网上进行通信时所使用的协议方案。HTTP有很多应用，但最著名的是用于
-web浏览器和web服务器之间的双工通信。
-
-HTTP起初是一个简单的协议，因此你可能会认为关于这个协议没有太多好 说的。但现在，你手上拿着的是却一本两磅重 的书。如果你对我们怎么
-会写出一本650页 的关于HTTP的书感到奇怪的话，可以去看一下目录。本书不仅仅是一本HTTP首部的参考手册；它是一本名副其实的web结构圣经。
-
-本书中，我们尝试着将HTTP中一些互相关联且常被误解的规则梳理清楚，并编写了一系列基于各种主题的章节，对HTTP各方面的特性进行了介绍。
-纵观全书，我们对HTTP“为什么”这样做进行了详细的解释，而不仅仅停留在它是“怎么做”的。而且，为了节省大家寻找参考文献的时间，我们还对
-很多HTTP应用程序正常工作所必须的、重要的非HTTP技术进行了介绍。在组织得便于使用的附录中，可以找到按照字母排序的首部参考（这些首部
-构成了最常见的HTTP文本的基础）。我们希望这种概念性的设计有助于读者对HTTP的使用。
-
-本书是为所有希望理解HTTP以及Web底层结构的人编写的。软硬件工程师也可以将本书作为HTTP及相关web技术的条理清楚的参考书使用。系统架构
-师和网络管理员可以通过本书更好地了解如何设计、实现并管理复杂的网络架构。性能工程师和分析人员可以从高速缓存和性能优化的相关章节中
-获益。市场营销和咨询专家可以通过概念的介绍更好地理解web技术的前景。
-
-本书对一些常见的误解进行了说明，推荐了“各种使用诀窍”，提供了便捷的参考资料，并且对枯燥且令人费解的标准规范进行了可读性很强的介
-绍。在这本书里，我们对Web正常工作所必须且互相关联的技术进行了详细的介绍。
-
-本书是很多对因特网技术充满热情的人经过大量工作写成的。希望对你有所帮助。
-</code></pre><h2 id="阅读进度"><a href="#阅读进度" class="headerlink" title="阅读进度"></a>阅读进度</h2><pre><code>2018年8月开始阅读
-</code></pre><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Books/">Books</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP权威指南/">HTTP权威指南</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1056,7 +1090,7 @@ HTTP起初是一个简单的协议，因此你可能会认为关于这个协议�
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 1;
+            var backgroundnum = 2;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
