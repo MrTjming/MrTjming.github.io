@@ -302,7 +302,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="一、-安装Apache2"><a href="#一、-安装Apache2" class="headerlink" title="一、 安装Apache2"></a>一、 安装Apache2</h2><p><code>sudo apt-get install apache2</code><br>安装完成后，浏览器访问:<a href="http://ipAddr/，出现It" target="_blank" rel="noopener">http://ipAddr/，出现It</a> works!网页表示安装成功。</p>
+        <h2 id="一、-安装Apache2"><a href="#一、-安装Apache2" class="headerlink" title="一、 安装Apache2"></a>一、 安装Apache2</h2><p><code>sudo apt-get install apache2</code><br>安装完成后，浏览器访问:<a href="http://ipAddr/" target="_blank" rel="noopener">http://ipAddr/</a> 出现It works!网页表示安装成功。</p>
 <p>修改状态：<code>service apache2 status|start|stop|restart</code><br>站点目录：/var/www/<br>修改权限：sudo chmod 777 /var/www<br>安装目录：/etc/apache2/<br>全局配置：/etc/apache2/apache2.conf<br>监听端口：/etc/apache2/ports.conf<br>虚拟主机：/etc/apache2/sites-enabled/000-default.conf</p>
 <h2 id="二、安装MariaDB"><a href="#二、安装MariaDB" class="headerlink" title="二、安装MariaDB"></a>二、安装MariaDB</h2><p><code>sudo apt-get install mariadb-server mariadb-client</code><br>启动MariaDB服务：<code>sudo systemctl start mysql</code><br>查看状态：<code>sudo systemctl status mysql</code><br>重启服务：<code>service mysql restart</code><br>查看监听端口的情况：<code>netstat -tunpl</code> 或 <code>netstat -tap</code><br>执行初始化安全脚本，默认root密码为空，设置root密码和其他选项：<code>sudo mysql_secure_installation</code><br>为NextCloud创建数据库和用户<br>创建数据库nextcloud，用户名nextcloud，密码XXXXXXXX</p>
 <p><code>sudo mysql -u root -p</code><br>进入MariaDB后，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#创建数据库，名为：nextcloud</span><br><span class="line">CREATE DATABASE nextcloud;</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON nextcloud.* TO &apos;nextcloud&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;XXXXXXXX&apos;;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line">#退出</span><br><span class="line">\q</span><br></pre></td></tr></table></figure></p>
@@ -382,54 +382,124 @@
         <h1 id="一-环境安装与配置"><a href="#一-环境安装与配置" class="headerlink" title="一.环境安装与配置"></a>一.环境安装与配置</h1><ol>
 <li>安装VM虚拟机</li>
 <li>在VM虚拟机里安装Ubuntu server版本,本教程使用ubuntu 18.10 server</li>
-<li>启用root用户<br>装完Ubuntu后进入,用新用户登录,并执行命令<code>sudo passwd root</code>,设置root用户密码.<br>执行<code>logout</code>注销当前用户,用root账户登录</li>
-<li>关闭防火墙<br><code>ufw diable</code></li>
-<li>卸载iptables组件<br><code>apt-get remove iptables</code></li>
-<li>下载安装VIM<br><code>apt-get install vim</code></li>
+<li>启用root用户  </li>
 </ol>
+<p>装完Ubuntu后进入,用新用户登录,并执行命令<code>sudo passwd root</code> 设置root用户密码.<br>执行<code>logout</code>注销当前用户,用root账户登录</p>
+<ol start="4">
+<li>关闭防火墙</li>
+</ol>
+<p><code>ufw diable</code></p>
+<ol start="5">
+<li>卸载iptables组件</li>
+</ol>
+<p><code>apt-get remove iptables</code></p>
+<ol start="6">
+<li>下载安装VIM</li>
+</ol>
+<p><code>apt-get install vim</code></p>
 <h1 id="二-SSH连接配置"><a href="#二-SSH连接配置" class="headerlink" title="二.SSH连接配置"></a>二.SSH连接配置</h1><p>Linux远程连接需求:<br>1.Linux有ssh服务<br>2.需要使用SSH客户端工具</p>
 <ol>
-<li>安装SSH工具<br><code>apt-get install openssh-server</code></li>
-<li>启动SSH服务<br><code>/etc/init.d/ssh /start</code><br>注意:查看进程是否启动指定服务<code>ps -e | grep sshd</code></li>
-<li>设置允许root登录<br><code>vim /etc/ssh/sshd_config</code><br>找到PermitRootLogin 将其值设为yes<br><code>PermitRootLogin yes</code><br>执行<code>sudo service ssh restart</code>重启服务</li>
-<li>使用SSH连接工具连接<br><code>ifconfig</code> 查看当前IP<br>使用SecureCRT或Putty连接</li>
+<li>安装SSH工具</li>
 </ol>
+<p><code>apt-get install openssh-server</code></p>
+<ol start="2">
+<li>启动SSH服务</li>
+</ol>
+<p><code>/etc/init.d/ssh /start</code><br>注意:查看进程是否启动指定服务<code>ps -e | grep sshd</code></p>
+<ol start="3">
+<li>设置允许root登录</li>
+</ol>
+<p><code>vim /etc/ssh/sshd_config</code><br>找到PermitRootLogin 将其值设为yes<br><code>PermitRootLogin yes</code><br>执行<code>sudo service ssh restart</code>重启服务</p>
+<ol start="4">
+<li>使用SSH连接工具连接</li>
+</ol>
+<p><code>ifconfig</code> 查看当前IP<br>使用SecureCRT或Putty连接</p>
 <h1 id="三-配置FTP服务"><a href="#三-配置FTP服务" class="headerlink" title="三.配置FTP服务"></a>三.配置FTP服务</h1><p>使用FTP方便文件互相传输</p>
 <ol>
-<li>安装vsftpd服务组件<br><code>apt-get install vsftpd</code></li>
-<li>修改ftp用户的密码<br>上述安装完成后,最自动为系统创建一个叫ftp的用户<br><code>passwd ftp</code></li>
-<li>设置ftp目录的权限<br>vsftpd安装完成后,会自动创建一个/srv/ftp的目录<br><code>cd /srv/ftp</code><br><code>chmod 777 /srv/ftp</code></li>
-<li>修改配置文件<br><code>vim /etc/vsftpd.conf</code><br> 0)设置允许写的权限<pre><code>write_enable=YES
-</code></pre> 1)设置不允许匿名登录<pre><code>anonymous_enable=NO
-</code></pre> 2)允许本地用户登录<pre><code>local_enable=YES
-</code></pre> 3)是否将所有用户的限制在主目录<pre><code>chroot_local_user=YES
-</code></pre> 4)是否启动限制用户名单<pre><code>chroot_list_enable=YES
-</code></pre> 5)定义名单设置的目录(方便管理大的账号列表)<pre><code>chroot_list_file=/etc/vsftpd.chroot_list
-</code></pre> 6)增加服务配置<pre><code>pam_service_name=vsftpd
-</code></pre></li>
-<li>新建vsftpd.chroot_list文件<br><code>vim /etc/vsftpd.chroot_list</code><br>在文件里写入访问的用户名ftp,保存退出</li>
-<li>修改/etc/pam.d/vsftpd<br><code>vim /etc/pam.d/vsftpd</code><br>注释掉最后一行<br><code># auth  required        pam_shells.so</code></li>
-<li>启动vsftpd服务<br><code>service vsftpd start</code><br>注意:重启 <code>service vsftpd restart</code></li>
-<li>客户端连接<br>推荐FileZilla<br>IP地址:ifconfig查看<br>账号:ftp<br>密码是之前设置的<br>端口:21</li>
+<li>安装vsftpd服务组件</li>
 </ol>
+<p><code>apt-get install vsftpd</code></p>
+<ol start="2">
+<li>修改ftp用户的密码</li>
+</ol>
+<p>上述安装完成后,最自动为系统创建一个叫ftp的用户<br><code>passwd ftp</code></p>
+<ol start="3">
+<li>设置ftp目录的权限</li>
+</ol>
+<p>vsftpd安装完成后,会自动创建一个/srv/ftp的目录<br><code>cd /srv/ftp</code><br><code>chmod 777 /srv/ftp</code></p>
+<ol start="4">
+<li>修改配置文件</li>
+</ol>
+<p><code>vim /etc/vsftpd.conf</code><br>    0)设置允许写的权限<br>        write_enable=YES<br>    1)设置不允许匿名登录<br>        anonymous_enable=NO<br>    2)允许本地用户登录<br>        local_enable=YES<br>    3)是否将所有用户的限制在主目录<br>        chroot_local_user=YES<br>    4)是否启动限制用户名单<br>        chroot_list_enable=YES<br>    5)定义名单设置的目录(方便管理大的账号列表)<br>        chroot_list_file=/etc/vsftpd.chroot_list<br>    6)增加服务配置<br>        pam_service_name=vsftpd</p>
+<ol start="5">
+<li>新建vsftpd.chroot_list文件</li>
+</ol>
+<p><code>vim /etc/vsftpd.chroot_list</code><br>在文件里写入访问的用户名ftp,保存退出</p>
+<ol start="6">
+<li>修改/etc/pam.d/vsftpd</li>
+</ol>
+<p><code>vim /etc/pam.d/vsftpd</code><br>注释掉最后一行<br><code># auth  required        pam_shells.so</code></p>
+<ol start="7">
+<li>启动vsftpd服务</li>
+</ol>
+<p><code>service vsftpd start</code><br>注意:重启 <code>service vsftpd restart</code></p>
+<ol start="8">
+<li>客户端连接</li>
+</ol>
+<p>推荐FileZilla<br>IP地址:ifconfig查看<br>账号:ftp<br>密码是之前设置的<br>端口:21</p>
 <h1 id="四-JDK的安装与配置"><a href="#四-JDK的安装与配置" class="headerlink" title="四.JDK的安装与配置"></a>四.JDK的安装与配置</h1><p>Hadoop本质是Java.</p>
 <ol>
-<li>下载JDK (下载for linux的.tar.gz)<br>1)在官网下载,使用FTP上传<br>2)使用wget下载</li>
-<li>解压缩JDK<br><code>tar xzvf jdk-name-***.tar.gz -C /usr/local</code><br>解压至-C后面的目录</li>
-<li>文件夹改名(可选)<br>进入解压后的目录<br><code>cd /usr/local</code><br>将文件名改短<br><code>mv jdk***/ jdk</code></li>
-<li>配置环境文件<br><code>vim /etc/profile</code><br>打开后进入最下面配置<br><code>export JAVA_HOME=/usr/local/jdk</code><br><code>export PATH=$PATH:$JAVA_HOME/bin:</code><br><code>export CLASS_PATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</code></li>
-<li>使配置立即生效<br><code>source /etc/profile</code></li>
-<li>测试JDK<br>执行<code>java</code> 或 <code>javac</code> 看是否出错</li>
+<li>下载JDK (下载for linux的.tar.gz)</li>
 </ol>
+<p>1)在官网下载,使用FTP上传<br>2)使用wget下载</p>
+<ol start="2">
+<li>解压缩JDK</li>
+</ol>
+<p><code>tar xzvf jdk-name-***.tar.gz -C /usr/local</code><br>解压至-C后面的目录</p>
+<ol start="3">
+<li>文件夹改名(可选)</li>
+</ol>
+<p>进入解压后的目录<br><code>cd /usr/local</code><br>将文件名改短<br><code>mv jdk***/ jdk</code></p>
+<ol start="4">
+<li>配置环境文件</li>
+</ol>
+<p><code>vim /etc/profile</code><br>打开后进入最下面配置<br><code>export JAVA_HOME=/usr/local/jdk</code><br><code>export PATH=$PATH:$JAVA_HOME/bin:</code><br><code>export CLASS_PATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</code></p>
+<ol start="5">
+<li>使配置立即生效</li>
+</ol>
+<p><code>source /etc/profile</code></p>
+<ol start="6">
+<li>测试JDK</li>
+</ol>
+<p>执行<code>java</code> 或 <code>javac</code> 看是否出错</p>
 <h1 id="五-安装Hadoop"><a href="#五-安装Hadoop" class="headerlink" title="五.安装Hadoop"></a>五.安装Hadoop</h1><ol>
-<li>下载Hadoop并用FTP上传<br>在<a href="http://www.apache.org找到Hadoop下载" target="_blank" rel="noopener">www.apache.org找到Hadoop下载</a></li>
-<li>解压Hadoop<br><code>tar xzvf hadoop***.tar.gz -C /usr/local</code></li>
-<li>重命名(可选)<br>进入解压后的目录<br><code>cd /usr/local</code><br>将文件名改短<br><code>mv hadoop***/ hadoop</code></li>
-<li>配置环境文件<br><code>vim /etc/profile</code><br>打开后进入最下面配置<br><code>export HADOOP_HOME=/usr/local/hadoop</code><br><code>export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME:/sbin:</code></li>
-<li>使配置立即生效<br><code>source /etc/profile</code></li>
-<li>在hadoop的资源文件定义要使用的jdk<br>路径 /usr/local/hadoop/etc/hadoop/hadoop-env.sh<br>修改下面的内容<br>export JAVA_HOME=/usr/local/jdk</li>
-<li>使用测试程序测序hadoop环境<br>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code></li>
+<li>下载Hadoop并用FTP上传</li>
 </ol>
+<p>在<a href="http://www.apache.org找到Hadoop下载" target="_blank" rel="noopener">www.apache.org找到Hadoop下载</a></p>
+<ol start="2">
+<li>解压Hadoop</li>
+</ol>
+<p><code>tar xzvf hadoop***.tar.gz -C /usr/local</code></p>
+<ol start="3">
+<li>重命名(可选)</li>
+</ol>
+<p>进入解压后的目录<br><code>cd /usr/local</code><br>将文件名改短<br><code>mv hadoop***/ hadoop</code></p>
+<ol start="4">
+<li>配置环境文件</li>
+</ol>
+<p><code>vim /etc/profile</code><br>打开后进入最下面配置<br><code>export HADOOP_HOME=/usr/local/hadoop</code><br><code>export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME:/sbin:</code></p>
+<ol start="5">
+<li>使配置立即生效</li>
+</ol>
+<p><code>source /etc/profile</code></p>
+<ol start="6">
+<li>在hadoop的资源文件定义要使用的jdk</li>
+</ol>
+<p>路径 /usr/local/hadoop/etc/hadoop/hadoop-env.sh<br>修改下面的内容<br>export JAVA_HOME=/usr/local/jdk</p>
+<ol start="7">
+<li>使用测试程序测序hadoop环境</li>
+</ol>
+<p>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code></p>
 
       
     </div>
