@@ -7,20 +7,20 @@
   
   
   
-  <title>开源协议 | WangJu</title>
+  <title>Mysql 8.0修改Root账号的加密模式 | WangJu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开源协议的定义 开源许可是一种计算机软件和其他产品的许可类型，允许使用、修改或在定义的条款和条件下使用、修改或共享的源代码、蓝图和设计。这允许终端用户和商业公司对源代码、图纸或设计进行审查和修改，以满足自己的定制、好奇心或故障排除的需要。开源许可的软件大多是免费的，尽管这并不一定是必须的。许可证只允许非商业的重新分配或修改个人使用的源代码，通常不被认为是开源许可。然而,开源许可可能会有一些限制,尤">
-<meta name="keywords" content="开源协议">
+  <meta name="description" content="Just a simple personal blog">
+<meta name="keywords" content="mysql,随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开源协议">
-<meta property="og:url" content="https://mrtjming.github.io/2018/09/11/openSource/index.html">
+<meta property="og:title" content="Mysql 8.0修改Root账号的加密模式">
+<meta property="og:url" content="https://mrtjming.github.io/2018/10/25/mysql80ChangePwdType/index.html">
 <meta property="og:site_name" content="WangJu">
-<meta property="og:description" content="开源协议的定义 开源许可是一种计算机软件和其他产品的许可类型，允许使用、修改或在定义的条款和条件下使用、修改或共享的源代码、蓝图和设计。这允许终端用户和商业公司对源代码、图纸或设计进行审查和修改，以满足自己的定制、好奇心或故障排除的需要。开源许可的软件大多是免费的，尽管这并不一定是必须的。许可证只允许非商业的重新分配或修改个人使用的源代码，通常不被认为是开源许可。然而,开源许可可能会有一些限制,尤">
+<meta property="og:description" content="Just a simple personal blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-15T01:41:29.254Z">
+<meta property="og:updated_time" content="2018-10-25T09:52:57.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开源协议">
-<meta name="twitter:description" content="开源协议的定义 开源许可是一种计算机软件和其他产品的许可类型，允许使用、修改或在定义的条款和条件下使用、修改或共享的源代码、蓝图和设计。这允许终端用户和商业公司对源代码、图纸或设计进行审查和修改，以满足自己的定制、好奇心或故障排除的需要。开源许可的软件大多是免费的，尽管这并不一定是必须的。许可证只允许非商业的重新分配或修改个人使用的源代码，通常不被认为是开源许可。然而,开源许可可能会有一些限制,尤">
+<meta name="twitter:title" content="Mysql 8.0修改Root账号的加密模式">
+<meta name="twitter:description" content="Just a simple personal blog">
   
     <link rel="alternative" href="/atom.xml" title="WangJu" type="application/atom+xml">
   
@@ -269,11 +269,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-openSource" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mysql80ChangePwdType" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/09/11/openSource/" class="article-date">
-      <time datetime="2018-09-11T14:23:22.000Z" itemprop="datePublished">2018-09-11</time>
+      <a  href="/2018/10/25/mysql80ChangePwdType/" class="article-date">
+      <time datetime="2018-10-25T09:41:15.000Z" itemprop="datePublished">2018-10-25</time>
 </a>
 
     </div>
@@ -287,7 +287,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      开源协议
+      Mysql 8.0修改Root账号的加密模式
     </h1>
   
 
@@ -296,14 +296,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Learn/">Learn</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源协议/">开源协议</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,41 +309,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="开源协议的定义"><a href="#开源协议的定义" class="headerlink" title="开源协议的定义"></a>开源协议的定义</h1><blockquote>
-<p>开源许可是一种计算机软件和其他产品的许可类型，允许使用、修改或在定义的条款和条件下使用、修改或共享的源代码、蓝图和设计。这允许终端用户和商业公司对源代码、图纸或设计进行审查和修改，以满足自己的定制、好奇心或故障排除的需要。开源许可的软件大多是免费的，尽管这并不一定是必须的。许可证只允许非商业的重新分配或修改个人使用的源代码，通常不被认为是开源许可。然而,开源许可可能会有一些限制,尤其是对软件的起源的表达,比如要求保留作者的名字和代码中的版权声明,或要求重新分配授权软件只有在相同的许可(如copyleft许可证)。一组流行的开源软件许可证是由开源计划(OSI)根据其开源定义(OSD)批准的。          ——维基百科</p>
-</blockquote>
-<h1 id="为什么要使用协议"><a href="#为什么要使用协议" class="headerlink" title="为什么要使用协议"></a>为什么要使用协议</h1><p>代码一旦在互联网上公布后，可能被任何人看到并获取。有的人将网上公布的代码用于自己的开源软件，但是也有的会用于商业用途并可能带来一系列的问题。使用协议，可能保留你对公布的代码的一部分权利。你可以规定你公布的代码可以被哪些人用于哪些用途，并且说明他人使用你的代码导致的一切问题都与你无关。</p>
-<h1 id="常见的开源协议"><a href="#常见的开源协议" class="headerlink" title="常见的开源协议"></a>常见的开源协议</h1><h2 id="BSD协议"><a href="#BSD协议" class="headerlink" title="BSD协议"></a>BSD协议</h2><h3 id="使用者权利："><a href="#使用者权利：" class="headerlink" title="使用者权利："></a>使用者权利：</h3><blockquote>
-<p>1.可以自由使用和修改，修改后的代码可以用于开源软件甚至是专有软件的发布。<br>2.可更改协议</p>
-</blockquote>
-<h3 id="使用者义务："><a href="#使用者义务：" class="headerlink" title="使用者义务："></a>使用者义务：</h3><blockquote>
-<p>1.发布产品的源代码中需要注明使用的开源代码是基于BSD协议的<br>2.发布产品中的二进制文件需要在文档中注明使用的开源代码是基于BSD协议的<br>3.不可用开源代码作者/机构的名字和开源作品的名字来做市场推广  </p>
-</blockquote>
-<h2 id="Apache-Licence"><a href="#Apache-Licence" class="headerlink" title="Apache Licence"></a>Apache Licence</h2><h3 id="使用者权利：-1"><a href="#使用者权利：-1" class="headerlink" title="使用者权利："></a>使用者权利：</h3><blockquote>
-<p>1.可使用，复制，修改，合并，出版发行，发布，二次授权及贩卖软件或软件的副本<br>2.可更改协议</p>
-</blockquote>
-<h3 id="使用者义务：-1"><a href="#使用者义务：-1" class="headerlink" title="使用者义务："></a>使用者义务：</h3><blockquote>
-<p>1.在软件及软件副本中需要包含版权申明和许可申明</p>
-</blockquote>
-<h2 id="MIT协议"><a href="#MIT协议" class="headerlink" title="MIT协议"></a>MIT协议</h2><h3 id="使用者权利：-2"><a href="#使用者权利：-2" class="headerlink" title="使用者权利："></a>使用者权利：</h3><blockquote>
-<p>1.可使用，复制，修改，合并，出版发行，发布，二次授权及贩卖软件或软件的副本<br>2.可更改协议</p>
-</blockquote>
-<h3 id="使用者义务：-2"><a href="#使用者义务：-2" class="headerlink" title="使用者义务："></a>使用者义务：</h3><blockquote>
-<p>1.在软件及软件副本中需要包含版权申明和许可申明</p>
-</blockquote>
-<h2 id="GPL协议"><a href="#GPL协议" class="headerlink" title="GPL协议"></a>GPL协议</h2><h3 id="使用者权利：-3"><a href="#使用者权利：-3" class="headerlink" title="使用者权利："></a>使用者权利：</h3><blockquote>
-<p>1.可免费使用或修改开源代码</p>
-</blockquote>
-<h3 id="使用者义务：-3"><a href="#使用者义务：-3" class="headerlink" title="使用者义务："></a>使用者义务：</h3><blockquote>
-<p>1.产品中使用了GPL协议的代码， 则该产品也必须使用GPL协议（传染性）<br>2.修改后的代码不能作为闭源的商业软件来发布和销售</p>
-</blockquote>
-<h2 id="LGPL协议"><a href="#LGPL协议" class="headerlink" title="LGPL协议"></a>LGPL协议</h2><h3 id="使用者权利：-4"><a href="#使用者权利：-4" class="headerlink" title="使用者权利："></a>使用者权利：</h3><blockquote>
-<p>1.可免费使用或修改开源代码</p>
-</blockquote>
-<h3 id="使用者义务：-4"><a href="#使用者义务：-4" class="headerlink" title="使用者义务："></a>使用者义务：</h3><blockquote>
-<p>1.产品中使用或修改了LGPL协议的代码， 则该部分代码也需使用LGPL协议<br>2.商业软件可使用或修改LGPL的协议</p>
-</blockquote>
-
+        
       
     </div>
     
@@ -355,13 +317,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/09/11/openSource/">开源协议</a></p>
+        <p><span>本文标题:</span><a  href="/2018/10/25/mysql80ChangePwdType/">Mysql 8.0修改Root账号的加密模式</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Mr.Tan 的个人博客">Mr.Tan</a></p>
-        <p><span>发布时间:</span>2018年09月11日 - 22时23分</p>
-        <p><span>最后更新:</span>2018年09月15日 - 09时41分</p>
+        <p><span>发布时间:</span>2018年10月25日 - 17时41分</p>
+        <p><span>最后更新:</span>2018年10月25日 - 17时52分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/11/openSource/" title="开源协议">https://mrtjming.github.io/2018/09/11/openSource/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://mrtjming.github.io/2018/09/11/openSource/　　作者: Mr.Tan" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/10/25/mysql80ChangePwdType/" title="Mysql 8.0修改Root账号的加密模式">https://mrtjming.github.io/2018/10/25/mysql80ChangePwdType/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://mrtjming.github.io/2018/10/25/mysql80ChangePwdType/　　作者: Mr.Tan" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -372,18 +334,18 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/09/12/hexoBlog/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a  href="/2018/10/25/djangoConnectMysql/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          关于Hexo博客的搭建与使用
+          Django1.11连接Mysql的问题-Python3安装mysqlclient
         
       </div>
     </a>
   
   
-    <a  href="/2018/09/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a  href="/2018/10/21/nextClouldInstall/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">个人网盘nextClould部署</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -395,7 +357,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开源协议的定义"><span class="toc-number">1.</span> <span class="toc-text">开源协议的定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要使用协议"><span class="toc-number">2.</span> <span class="toc-text">为什么要使用协议</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见的开源协议"><span class="toc-number">3.</span> <span class="toc-text">常见的开源协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BSD协议"><span class="toc-number">3.1.</span> <span class="toc-text">BSD协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者权利："><span class="toc-number">3.1.1.</span> <span class="toc-text">使用者权利：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者义务："><span class="toc-number">3.1.2.</span> <span class="toc-text">使用者义务：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache-Licence"><span class="toc-number">3.2.</span> <span class="toc-text">Apache Licence</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者权利：-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">使用者权利：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者义务：-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">使用者义务：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MIT协议"><span class="toc-number">3.3.</span> <span class="toc-text">MIT协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者权利：-2"><span class="toc-number">3.3.1.</span> <span class="toc-text">使用者权利：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者义务：-2"><span class="toc-number">3.3.2.</span> <span class="toc-text">使用者义务：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPL协议"><span class="toc-number">3.4.</span> <span class="toc-text">GPL协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者权利：-3"><span class="toc-number">3.4.1.</span> <span class="toc-text">使用者权利：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者义务：-3"><span class="toc-number">3.4.2.</span> <span class="toc-text">使用者义务：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LGPL协议"><span class="toc-number">3.5.</span> <span class="toc-text">LGPL协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者权利：-4"><span class="toc-number">3.5.1.</span> <span class="toc-text">使用者权利：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用者义务：-4"><span class="toc-number">3.5.2.</span> <span class="toc-text">使用者义务：</span></a></li></ol></li></ol></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn {
@@ -458,7 +420,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  // id: '开源协议', // 可选。默认为 location.href
+  // id: 'Mysql 8.0修改Root账号的加密模式', // 可选。默认为 location.href
   owner: 'MrTjming',
   repo: 'MrTjming.github.io',
   oauth: {
@@ -476,13 +438,13 @@ gitment.render('comments')
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/09/12/hexoBlog/" title="上一篇: 关于Hexo博客的搭建与使用">
+            <a  href="/2018/10/25/djangoConnectMysql/" title="上一篇: Django1.11连接Mysql的问题-Python3安装mysqlclient">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/09/11/hello-world/" title="下一篇: Hello World">
+            <a  href="/2018/10/21/nextClouldInstall/" title="下一篇: 个人网盘nextClould部署">
                 <i class="fa fa-angle-right"></i>
             </a>
         
