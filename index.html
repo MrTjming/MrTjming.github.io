@@ -364,7 +364,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="1-登录mysql，连接用户为root。"><a href="#1-登录mysql，连接用户为root。" class="headerlink" title="1.登录mysql，连接用户为root。"></a>1.登录mysql，连接用户为root。</h2><p><code>mysql -u root -p</code></p>
+<h2 id="2-执行命令查看加密方式"><a href="#2-执行命令查看加密方式" class="headerlink" title="2.执行命令查看加密方式"></a>2.执行命令查看加密方式</h2><p><code>use mysql;</code><br><code>select user,plugin from user where user=‘root’;</code></p>
+<h2 id="3-执行命令修改加密方式"><a href="#3-执行命令修改加密方式" class="headerlink" title="3.执行命令修改加密方式"></a>3.执行命令修改加密方式</h2><p><code>alter user ‘root’@‘localhost’ identified with mysql_native_password by ‘yourpassword’</code></p>
+<h2 id="4-属性权限使配置生效"><a href="#4-属性权限使配置生效" class="headerlink" title="4.属性权限使配置生效"></a>4.属性权限使配置生效</h2><p><code>flush privileges</code></p>
+
       
     </div>
     
