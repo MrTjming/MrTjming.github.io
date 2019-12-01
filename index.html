@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 20px;">Mysql</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nextClould/" style="font-size: 10px;">nextClould</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+                        <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 20px;">Mysql</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Sping-Boot/" style="font-size: 10px;">Sping Boot</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nextClould/" style="font-size: 10px;">nextClould</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/版本管理/" style="font-size: 10px;">版本管理</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/计网试验/" style="font-size: 10px;">计网试验</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
                     </div>
                 </section>
                 
@@ -272,6 +272,391 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-GitTutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/11/20/GitTutorial/" class="article-date">
+      <time datetime="2019-11-20T14:17:10.000Z" itemprop="datePublished">2019-11-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/11/20/GitTutorial/">Git教程</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><p>git config –global user.name “yourname”<br>git config –global user.email “<a href="mailto:youremail@domain.com" target="_blank" rel="noopener">youremail@domain.com</a>“</p>
+<p>config的三个作用域</p>
+<ul>
+<li>–global</li>
+<li>–local</li>
+<li>–system<br>使用 <code>git config --list --global</code> 可以查看作用范围</li>
+</ul>
+<p>注意:若设置了local,则当前仓库使用local的设置,否则使用global的设置</p>
+<h2 id="建立Git仓库"><a href="#建立Git仓库" class="headerlink" title="建立Git仓库"></a>建立Git仓库</h2><ol>
+<li>已有项目代码纳入Git管理<br><code>git init</code></li>
+<li>新建的项目直接用Git管理<br><code>git init your_project</code><br>注意:这样会新建一个your_project的目录</li>
+</ol>
+<p><code>git add -u</code><br>把所有之前已经add的文件的更改add到暂存区</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/版本管理/">版本管理</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-NetWork-Exp-1-HTTPProxy" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/10/13/NetWork-Exp-1-HTTPProxy/" class="article-date">
+      <time datetime="2019-10-13T14:29:48.000Z" itemprop="datePublished">2019-10-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/10/13/NetWork-Exp-1-HTTPProxy/">计网试验一:搭建HTTP代理服务器</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="计算机网络试验一-搭建HTTP代理服务器"><a href="#计算机网络试验一-搭建HTTP代理服务器" class="headerlink" title="计算机网络试验一: 搭建HTTP代理服务器"></a>计算机网络试验一: 搭建HTTP代理服务器</h2><p>使用Java语言实现</p>
+<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><ol>
+<li>开启一个Socket, bind 并 listen一个端口</li>
+<li>当客户端连接到这个端口的时候,获得连接的TCP Socket,并新创建一个线程处理这个Socket<ol>
+<li>接收到来着客户端的请求信息request</li>
+<li>从request中解析出method,ip,port,等信息</li>
+<li>判断解析出的协议是否支持, 页面是否有缓存</li>
+<li>代理服务器连接客户端要访问的目标页面所在的服务器,将request发送过去</li>
+<li>代理服务器接收目标服务器的响应response</li>
+<li>代理服务器将response发给客户端</li>
+<li>关闭socket</li>
+</ol>
+</li>
+</ol>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><ol>
+<li>设置浏览器代理为服务器对应的IP和port即可</li>
+</ol>
+<h2 id="完成度"><a href="#完成度" class="headerlink" title="完成度"></a>完成度</h2><ul>
+<li><p>[x] HTTP代理</p>
+</li>
+<li><p>[ ] 缓存</p>
+</li>
+<li><p>[ ] 网站限制</p>
+</li>
+</ul>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ol>
+<li><p>使用Java的BufferedReader对象的readline()函数来读取服务器响应的内容时,会卡在最后一行,等1.3min后才返回内容</p>
+<p><strong>原因</strong>: </p>
+<p>​    readline()函数是根据换行符来读取的,若响应数据的最后一行没有换行符,则BufferedReader会一直阻塞,直到连接超时被Close掉,readLine才会返回数据.</p>
+<p><strong>解决方案:</strong></p>
+<p>​    1. 是</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代理/">代理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计网试验/">计网试验</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-manyGitAccount" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/09/04/manyGitAccount/" class="article-date">
+      <time datetime="2019-09-04T11:53:12.000Z" itemprop="datePublished">2019-09-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/09/04/manyGitAccount/">Git多账号使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="同一台设备同时使用多个Git账号"><a href="#同一台设备同时使用多个Git账号" class="headerlink" title="同一台设备同时使用多个Git账号"></a>同一台设备同时使用多个Git账号</h1><h2 id="1-生成多个账号的RSA"><a href="#1-生成多个账号的RSA" class="headerlink" title="1.生成多个账号的RSA"></a>1.生成多个账号的RSA</h2><p>ssh-keygen -t rsa -C “your email”</p>
+<p>回车设置不同的名字.</p>
+<p>生成后将公钥加入到不同的github账号里</p>
+<h2 id="2-添加ssh配置文件"><a href="#2-添加ssh配置文件" class="headerlink" title="2.添加ssh配置文件"></a>2.添加ssh配置文件</h2><p>在C:\Users\Administrator\.ssh 目录下新建名为config的文件,文件内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">	 HostName github.com</span><br><span class="line">	 User MrTjming</span><br><span class="line">	 IdentityFile C:/Users/Administrator/.ssh/id_rsa</span><br><span class="line">	 </span><br><span class="line"></span><br><span class="line">Host qq</span><br><span class="line">	HostName github.com</span><br><span class="line">    User	Jemy-Tan</span><br><span class="line">    IdentityFile	C:/Users/Administrator/.ssh/id_rsa_qq</span><br></pre></td></tr></table></figure>
+<p>其中Host 可自定义,用于区分即可 </p>
+<h2 id="3-切换git的账号"><a href="#3-切换git的账号" class="headerlink" title="3.切换git的账号"></a>3.切换git的账号</h2><p>查看用户名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br></pre></td></tr></table></figure>
+<p>查看用户邮箱</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<p>修改用户名和邮箱的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your_username&quot;</span><br><span class="line">git config --global user.email &quot;Your_email&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="4-切换"><a href="#4-切换" class="headerlink" title="4.切换"></a>4.切换</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改origin url</span></span><br><span class="line">git remote rm origin</span><br><span class="line"><span class="comment"># 注意：下面的qq是第二步设置的Host</span></span><br><span class="line">git remote add origin git@qq:&lt;username&gt;/&lt;repo-name&gt;.git</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-SpringBoot" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/18/SpringBoot/" class="article-date">
+      <time datetime="2019-01-18T14:52:31.000Z" itemprop="datePublished">2019-01-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/18/SpringBoot/">Spring Boot学习笔记</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="碰到的问题"><a href="#碰到的问题" class="headerlink" title="碰到的问题"></a>碰到的问题</h1><h2 id="1-新建项目不能run"><a href="#1-新建项目不能run" class="headerlink" title="1.新建项目不能run"></a>1.新建项目不能run</h2><p>使用Maven的install</p>
+<h2 id="2-run起来的项目404"><a href="#2-run起来的项目404" class="headerlink" title="2.run起来的项目404"></a>2.run起来的项目404</h2><p>解决方案: </p>
+<ol>
+<li>controller类必须在SpringApplication同目录或其子目录下</li>
+<li>添加组件的基础包扫描</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sping-Boot/">Sping Boot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-deployDjangoInCentOS" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/22/deployDjangoInCentOS/" class="article-date">
+      <time datetime="2018-12-22T11:26:19.000Z" itemprop="datePublished">2018-12-22</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/22/deployDjangoInCentOS/">在CentOS上部署Django项目</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><ul>
+<li>CentOS 7.5</li>
+<li>Python 3.6</li>
+<li>Django 1.11.x</li>
+</ul>
+<h1 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h1><p>##　安装Python3 并与Python2并存<br>使用<code>which python</code>查看python位置,cd进入该位置<br>使用<code>mv python python.bak</code>备份<br>执行安装相关依赖<br><code>yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</code> </p>
+<p>下载Python编译安装包 <code>wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6.tar.xz</code><br>解压 <code>tar -xvJf  Python-3.6.6.tar.xz</code><br>切换进入解压后的目录 <code>cd Python-3.6.6</code><br>编译安装<code>./configure prefix=/usr/local/python3</code><br><code>make &amp;&amp; make install</code></p>
+<p>添加软连接<br><code>ln -s /usr/local/python3/bin/python3 /usr/bin/python3</code><br><code>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip</code><br><strong>注意</strong>:以下步骤可选(若想使用python命令执行pyhton3,则进行一下配置)</p>
+<p>因为执行yum需要python2版本，所以我们还要修改yum的配置，执行：<br><code>vi /usr/bin/yum</code><br>把<code>#! /usr/bin/python</code><br>修改为<code>#! /usr/bin/python2</code></p>
+<p>同理 <code>vi /usr/libexec/urlgrabber-ext-down</code><br>把<code>#! /usr/bin/python</code><br>修改为<code>#! /usr/bin/python2</code></p>
+<h2 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h2><p>参考<a href="https://www.cnblogs.com/silentdoer/articles/7258232.html" target="_blank" rel="noopener">这里</a></p>
+<p>下载mysql的repo源 这里安装的mysql5.7<br><code>cd /usr/local/src/</code><br><code>wget http://repo.mysql.com/mysql57-community-release-el7-8.noarch.rpm</code><br><code>rpm -ivh mysql57-community-release-el7-8.noarch.rpm</code><br><code>yum --installroot=/usr/local/mysql --releasever=/ -y install mysql-server</code></p>
+<p> 启动mysql服务<br><code>service mysqld restart</code><br> 重置密码<br> 在日志文件里找到密码<br> 执行<code>grep &quot;password&quot; /var/log/mysqld.log</code><br>出现如下结果<br>2018-12-22T13:21:07.714669Z 1 [Note] A temporary password is generated for root@localhost: <strong>U%wng8tKEUf5</strong><br>加粗部分为初始密码<br><code>mysql -uroot -p</code> 输入密码<br>用该密码登录到服务端后，必须马上修改密码再执行一些数据库操作，不然会报如下错误：</p>
+<p>mysql&gt; select @@log_error;<br>ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.<br>mysql&gt;<br>修改密码（注意，登录后的操作后面都最好要有;结尾）</p>
+<p>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘root123’;</p>
+<h2 id="安装Redis"><a href="#安装Redis" class="headerlink" title="安装Redis"></a>安装Redis</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-djangoConnectMysql" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -626,8 +1011,8 @@
 <ol start="7">
 <li>使用测试程序测序hadoop环境</li>
 </ol>
-<p>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code></p>
-<h1 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h1><p>密钥对分为公钥和私钥,其中公钥放在服务器,私钥放在要通过SSH连接服务器的本机.<br>公钥相当于锁,私钥相当于钥匙.</p>
+<p>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code><br>执行wordcount统计单词数<br><code>hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.5.jar wordcount input/info.txt ouput/</code><br>注意:输出文件夹output必须不存在(<code>rm output/ -r</code> 可删除)</p>
+<h2 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h2><p>密钥对分为公钥和私钥,其中公钥放在服务器,私钥放在要通过SSH连接服务器的本机.<br>公钥相当于锁,私钥相当于钥匙.</p>
 <ol>
 <li><p>生成密钥对<br><code>ssh-keygen</code><br>选择生成的密钥对储存的位置,默认(/root/.ssh/id_rsa)即可<br>选择是否对公钥对进行加密,若不加密,直接回车</p>
 </li>
@@ -746,329 +1131,6 @@
 
 
   
-    <article id="post-aboutLinux" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/18/aboutLinux/" class="article-date">
-      <time datetime="2018-10-18T12:48:13.000Z" itemprop="datePublished">2018-10-18</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/18/aboutLinux/">Linux学习</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="一些小知识"><a href="#一些小知识" class="headerlink" title="一些小知识"></a>一些小知识</h3><p>1.Linux各发行版使用相同的内核释放源（版本可能不一样）并且遵循一套Linux开发的规范，所以它们的区别主要在于包管理的不同<br>根据包管理主要可分为两大类</p>
-<ul>
-<li>RPM方式（Red Hat, Fedora, SuSE）</li>
-<li>dpkg方式（Debian, Ubuntu）</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-mediaCodingFormat" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/17/mediaCodingFormat/" class="article-date">
-      <time datetime="2018-10-17T15:08:04.000Z" itemprop="datePublished">2018-10-17</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/17/mediaCodingFormat/">mediaCodingFormat</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>挖坑 </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-aboutDNS" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/16/aboutDNS/" class="article-date">
-      <time datetime="2018-10-16T11:53:12.000Z" itemprop="datePublished">2018-10-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/16/aboutDNS/">有关DNS的解析及原理</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="一-什么是DNS"><a href="#一-什么是DNS" class="headerlink" title="一.什么是DNS"></a>一.什么是DNS</h2><p>DNS(Domain Name System)是一种作用于TCP/IP的网络的提供将主机名与域名转换为IP地址的服务的系统。可以通俗地理解为，DNS提供的服务就是将浏览器里输入的域名转化为其对应的IP地址。</p>
-<h2 id="二-DNS服务器种类"><a href="#二-DNS服务器种类" class="headerlink" title="二.DNS服务器种类"></a>二.DNS服务器种类</h2><p>DNS服务器分为三种，分别对应从上到下的三级关系</p>
-<h3 id="1-根DNS服务器"><a href="#1-根DNS服务器" class="headerlink" title="1.根DNS服务器"></a>1.根DNS服务器</h3><p>（一共13台）</p>
-<h3 id="2-顶级DNS服务器"><a href="#2-顶级DNS服务器" class="headerlink" title="2.顶级DNS服务器"></a>2.顶级DNS服务器</h3><p>各顶级域名（如com,cn,us等）的服务器</p>
-<h3 id="3-权威DNS服务器"><a href="#3-权威DNS服务器" class="headerlink" title="3.权威DNS服务器"></a>3.权威DNS服务器</h3><p>如comDNS服务器下对应着（baidu.com，google.com等DNS服务器）</p>
-<h2 id="三-DNS解析的流程"><a href="#三-DNS解析的流程" class="headerlink" title="三.DNS解析的流程"></a>三.DNS解析的流程</h2><p>从用户发起访问请求开始，DNS解析可能会按顺序进行以下几个流程，直到在某一层中得到了想要的结果，则结束整个解析流程。<br>1.浏览器检查浏览器的缓存中是否有该域名对应的有效的IP地址（缓存中的内容有时间，大小等限制）。<br>2.操作系统检查本机中的hosts文件是否有该域名的映射关系。<br>3.操作系统检查本地DNS解析器的缓存是否有该域名的映射关系<br>4.操作系统访问本机TCP/IP中参数设置的DNS服务器获取相关解析信息。注意：这里填写的DNS服务器不是13台域名根服务器。本机请求这里的DNS服务器后，DNS服务器会查询其是否有该域名的解析信息或者缓存信息，有则返回<br>5-1-1.若DNS服务器没有该域名的解析信息且使用的非转发模式，则DNS服务器发送请求至13台跟域名服务器，根域名服务器会根据请求的域名返回一个负责该顶级域名解析服务的IP地址（以下简称为DNS1），本地DNS会将请求再发送到DNS1处<br>5-1-2.若DNS1中有该域名的解析信息则返回，否则返回该顶级域名的次级DNS服务器的IP地址（以下简称为DNS2），本地DNS再将请求发送至DNS2，重复该过程直到找到解析信息。<br>5-2-1.若DNS服务器没有该域名的解析信息且使用的是转发模式，则将请求转发至本地DNS服务器的上一级，重复该过程直到找到解析信息。<br>6.解析成功后，保存解析结果至缓存，以便下次直接使用。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DNS/">DNS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ubuntuInstallInDoubleGpu" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/13/ubuntuInstallInDoubleGpu/" class="article-date">
-      <time datetime="2018-10-13T14:29:48.000Z" itemprop="datePublished">2018-10-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/13/ubuntuInstallInDoubleGpu/">安装Ubuntu的一些坑</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="一-在双显卡-N卡-核显-电脑上安装Ubuntu"><a href="#一-在双显卡-N卡-核显-电脑上安装Ubuntu" class="headerlink" title="一.在双显卡(N卡+核显)电脑上安装Ubuntu"></a>一.在双显卡(N卡+核显)电脑上安装Ubuntu</h2><h3 id="1-关闭Security-Boot"><a href="#1-关闭Security-Boot" class="headerlink" title="1.关闭Security Boot"></a>1.关闭Security Boot</h3><p>直接在BIOS界面关闭即可</p>
-<h3 id="2-安装时禁用nouveau显卡"><a href="#2-安装时禁用nouveau显卡" class="headerlink" title="2.安装时禁用nouveau显卡"></a>2.安装时禁用nouveau显卡</h3><p>U盘引导启动grub时，在install ubuntu选项上按e，在quiet slash –后面添加acpi_osi=linux nomodeset,按F10引导启动，安装Ubuntu后及时装上显卡驱动     </p>
-<h3 id="3-测试nvidia-驱动是否安装成功"><a href="#3-测试nvidia-驱动是否安装成功" class="headerlink" title="3.测试nvidia 驱动是否安装成功"></a>3.测试nvidia 驱动是否安装成功</h3><p>执行下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi   </span><br><span class="line">nvidia-settings</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-automateDeploymentInGithub" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/09/12/automateDeploymentInGithub/" class="article-date">
-      <time datetime="2018-09-12T08:36:02.000Z" itemprop="datePublished">2018-09-12</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/09/12/automateDeploymentInGithub/">对GitHub的项目自动部署</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="有关部署"><a href="#有关部署" class="headerlink" title="有关部署"></a>有关部署</h1><h2 id="什么是部署"><a href="#什么是部署" class="headerlink" title="什么是部署"></a>什么是部署</h2><p>要将一个项目的源代码运行起来需要可能需要对服务器进行各种设置，</p>
-<h2 id="为什么要使用自动部署"><a href="#为什么要使用自动部署" class="headerlink" title="为什么要使用自动部署"></a>为什么要使用自动部署</h2><p>每次往GitHub更新代码的时候，我们都很难看到代码实际的工作效果。</p>
-<p>## </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Learn/">Learn</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/部署/">部署</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1080,7 +1142,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2018 Mr.Tan
+                &copy; 2019 Mr.Tan
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/MrTjming" target="_blank">Blog</a> by Mr.Tan

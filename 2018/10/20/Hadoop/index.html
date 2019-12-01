@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="WangJu">
 <meta property="og:description" content="一.环境安装与配置 安装VM虚拟机 在VM虚拟机里安装Ubuntu server版本,本教程使用ubuntu 18.10 server 启用root用户    装完Ubuntu后进入,用新用户登录,并执行命令sudo passwd root 设置root用户密码.执行logout注销当前用户,用root账户登录  关闭防火墙  ufw diable  卸载iptables组件  apt-get r">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-27T08:42:56.730Z">
+<meta property="og:updated_time" content="2018-10-31T13:50:32.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop简单使用">
 <meta name="twitter:description" content="一.环境安装与配置 安装VM虚拟机 在VM虚拟机里安装Ubuntu server版本,本教程使用ubuntu 18.10 server 启用root用户    装完Ubuntu后进入,用新用户登录,并执行命令sudo passwd root 设置root用户密码.执行logout注销当前用户,用root账户登录  关闭防火墙  ufw diable  卸载iptables组件  apt-get r">
@@ -196,7 +196,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 20px;">Mysql</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nextClould/" style="font-size: 10px;">nextClould</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+                        <a href="/tags/CentOS/" style="font-size: 10px;">CentOS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/HTTP权威指南/" style="font-size: 10px;">HTTP权威指南</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 20px;">Mysql</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Sping-Boot/" style="font-size: 10px;">Sping Boot</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nextClould/" style="font-size: 10px;">nextClould</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/书籍/" style="font-size: 10px;">书籍</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/博客搭建/" style="font-size: 20px;">博客搭建</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/开源协议/" style="font-size: 10px;">开源协议</a> <a href="/tags/版本管理/" style="font-size: 10px;">版本管理</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/计网试验/" style="font-size: 10px;">计网试验</a> <a href="/tags/部署/" style="font-size: 10px;">部署</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
                     </div>
                 </section>
                 
@@ -429,8 +429,8 @@
 <ol start="7">
 <li>使用测试程序测序hadoop环境</li>
 </ol>
-<p>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code></p>
-<h1 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h1><p>密钥对分为公钥和私钥,其中公钥放在服务器,私钥放在要通过SSH连接服务器的本机.<br>公钥相当于锁,私钥相当于钥匙.</p>
+<p>使用wordcount测试<br>在Hadoop目录下创建一个文件夹<br><code>mkdir input</code><br>编写一个文件<br><code>echo hello,world nice to meet you &gt; input/info.txt</code><br>执行wordcount统计单词数<br><code>hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.5.jar wordcount input/info.txt ouput/</code><br>注意:输出文件夹output必须不存在(<code>rm output/ -r</code> 可删除)</p>
+<h2 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h2><p>密钥对分为公钥和私钥,其中公钥放在服务器,私钥放在要通过SSH连接服务器的本机.<br>公钥相当于锁,私钥相当于钥匙.</p>
 <ol>
 <li><p>生成密钥对<br><code>ssh-keygen</code><br>选择生成的密钥对储存的位置,默认(/root/.ssh/id_rsa)即可<br>选择是否对公钥对进行加密,若不加密,直接回车</p>
 </li>
@@ -456,7 +456,7 @@
         <p><span>本文标题:</span><a  href="/2018/10/20/Hadoop/">Hadoop简单使用</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Mr.Tan 的个人博客">Mr.Tan</a></p>
         <p><span>发布时间:</span>2018年10月20日 - 16时13分</p>
-        <p><span>最后更新:</span>2018年10月27日 - 16时42分</p>
+        <p><span>最后更新:</span>2018年10月31日 - 21时50分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/10/20/Hadoop/" title="Hadoop简单使用">https://mrtjming.github.io/2018/10/20/Hadoop/</a>
             <span class="copy-path" data-clipboard-text="原文: https://mrtjming.github.io/2018/10/20/Hadoop/　　作者: Mr.Tan" title=""></span>
@@ -493,7 +493,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-环境安装与配置"><span class="toc-number">1.</span> <span class="toc-text">一.环境安装与配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-SSH连接配置"><span class="toc-number">2.</span> <span class="toc-text">二.SSH连接配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-配置FTP服务"><span class="toc-number">3.</span> <span class="toc-text">三.配置FTP服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四-JDK的安装与配置"><span class="toc-number">4.</span> <span class="toc-text">四.JDK的安装与配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五-安装Hadoop"><span class="toc-number">5.</span> <span class="toc-text">五.安装Hadoop</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置SSH免密登录"><span class="toc-number">6.</span> <span class="toc-text">配置SSH免密登录</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-环境安装与配置"><span class="toc-number">1.</span> <span class="toc-text">一.环境安装与配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-SSH连接配置"><span class="toc-number">2.</span> <span class="toc-text">二.SSH连接配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-配置FTP服务"><span class="toc-number">3.</span> <span class="toc-text">三.配置FTP服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四-JDK的安装与配置"><span class="toc-number">4.</span> <span class="toc-text">四.JDK的安装与配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五-安装Hadoop"><span class="toc-number">5.</span> <span class="toc-text">五.安装Hadoop</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH免密登录"><span class="toc-number">5.1.</span> <span class="toc-text">配置SSH免密登录</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -585,7 +585,7 @@ gitment.render('comments')
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/25/djangoConnectMysql/">Django1.11连接Mysql的问题-Python3安装mysqlclient</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/25/mysql80ChangePwdType/">Mysql 8.0修改Root账号的加密模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/21/nextClouldInstall/">个人网盘nextClould部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/20/Hadoop/">Hadoop简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/20/mysql8Install/">Mysql 8.0 Server Install Fail</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/18/aboutLinux/">Linux学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/mediaCodingFormat/">mediaCodingFormat</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/16/aboutDNS/">有关DNS的解析及原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/13/ubuntuInstallInDoubleGpu/">安装Ubuntu的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/automateDeploymentInGithub/">对GitHub的项目自动部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoBlog/">关于Hexo博客的搭建与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/openSource/">开源协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/08/HTTPTheDefinitiveGuide/">HTTP权威指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/08/aboutJekyll/">关于Jekyll的使用</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/11/20/GitTutorial/">Git教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/13/NetWork-Exp-1-HTTPProxy/">计网试验一:搭建HTTP代理服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/04/manyGitAccount/">Git多账号使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/18/SpringBoot/">Spring Boot学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/deployDjangoInCentOS/">在CentOS上部署Django项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/25/djangoConnectMysql/">Django1.11连接Mysql的问题-Python3安装mysqlclient</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/25/mysql80ChangePwdType/">Mysql 8.0修改Root账号的加密模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/21/nextClouldInstall/">个人网盘nextClould部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/20/Hadoop/">Hadoop简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/20/mysql8Install/">Mysql 8.0 Server Install Fail</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/18/aboutLinux/">Linux学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/mediaCodingFormat/">mediaCodingFormat</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/16/aboutDNS/">有关DNS的解析及原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/13/ubuntuInstallInDoubleGpu/">安装Ubuntu的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/automateDeploymentInGithub/">对GitHub的项目自动部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoBlog/">关于Hexo博客的搭建与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/openSource/">开源协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/08/HTTPTheDefinitiveGuide/">HTTP权威指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/08/aboutJekyll/">关于Jekyll的使用</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
@@ -621,7 +621,7 @@ gitment.render('comments')
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2018 Mr.Tan
+                &copy; 2019 Mr.Tan
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/MrTjming" target="_blank">Blog</a> by Mr.Tan
