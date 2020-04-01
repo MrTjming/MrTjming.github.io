@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>个人网盘nextClould部署 | WangJu</title>
+  <meta name="keywords" content=" nextClould ">
+  <meta name="description" content="个人网盘nextClould部署 | WangJu">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="IntroduceAbout Me  Male, born in the 1990s, Undergraduate student  Like technology, research web development  Born in Guangdong Province, Now living in Qingdao, Shandong Program LanguagePython| c++|">
+<meta name="keywords" content="blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Me">
+<meta property="og:url" content="https://mrtjming.github.io/about/index.html">
+<meta property="og:site_name" content="WangJu">
+<meta property="og:description" content="IntroduceAbout Me  Male, born in the 1990s, Undergraduate student  Like technology, research web development  Born in Guangdong Province, Now living in Qingdao, Shandong Program LanguagePython| c++|">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-05T00:31:11.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About Me">
+<meta name="twitter:description" content="IntroduceAbout Me  Male, born in the 1990s, Undergraduate student  Like technology, research web development  Born in Guangdong Province, Now living in Qingdao, Shandong Program LanguagePython| c++|">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/brown-paper.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Mr.Tan</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/Mrtjming" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:mrtjming@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=983739298&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(20)</small></div></li>
+    
+        
+            
+            <li><div data-rel="Books">Books<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Learn">Learn<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://github.com/Mrtjming">github</a>
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="20">
+<input type="hidden" id="yelog_site_word_count" value="7k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode === 13){return false;}">
+        <input id="local-search-input" class="search" type="text" placeholder="以 in: 开头进行全文搜索" />
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color4">HTTP权威指南</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">书籍</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">版本管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">大数据</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Hadoop</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Sping Boot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">计网试验</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">HTTP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">代理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">DNS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">网络</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Jekyll</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">博客搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">GitHub</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">部署</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Django</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">CentOS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Python3</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">随笔</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">nextClould</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">开源协议</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">ubuntu</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="Books "
+           href="/2018/09/08/HTTPTheDefinitiveGuide/"
+           data-tag="HTTP权威指南,书籍"
+           data-author="" >
+            <span class="post-title" title="HTTP权威指南">HTTP权威指南</span>
+            <span class="post-date" title="2018-09-08 23:45:56">2018/09/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/20/GitTutorial/"
+           data-tag="Git,版本管理"
+           data-author="" >
+            <span class="post-title" title="Git教程">Git教程</span>
+            <span class="post-date" title="2019-11-20 22:17:10">2019/11/20</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/20/Hadoop/"
+           data-tag="大数据,Hadoop"
+           data-author="" >
+            <span class="post-title" title="Hadoop简单使用">Hadoop简单使用</span>
+            <span class="post-date" title="2018-10-20 16:13:10">2018/10/20</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/01/18/SpringBoot/"
+           data-tag="Sping Boot,Java"
+           data-author="" >
+            <span class="post-title" title="Spring Boot学习笔记">Spring Boot学习笔记</span>
+            <span class="post-date" title="2019-01-18 22:52:31">2019/01/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/13/NetWork-Exp-1-HTTPProxy/"
+           data-tag="Java,计网试验,HTTP,代理"
+           data-author="" >
+            <span class="post-title" title="计网试验一:搭建HTTP代理服务器">计网试验一:搭建HTTP代理服务器</span>
+            <span class="post-date" title="2019-10-13 22:29:48">2019/10/13</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/16/aboutDNS/"
+           data-tag="DNS,网络"
+           data-author="" >
+            <span class="post-title" title="有关DNS的解析及原理">有关DNS的解析及原理</span>
+            <span class="post-date" title="2018-10-16 19:53:12">2018/10/16</span>
+        </a>
+        
+        <a  class="Learn "
+           href="/2018/09/08/aboutJekyll/"
+           data-tag="Jekyll,博客搭建"
+           data-author="" >
+            <span class="post-title" title="关于Jekyll的使用">关于Jekyll的使用</span>
+            <span class="post-date" title="2018-09-08 00:19:12">2018/09/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/18/aboutLinux/"
+           data-tag="Linux"
+           data-author="" >
+            <span class="post-title" title="Linux学习">Linux学习</span>
+            <span class="post-date" title="2018-10-18 20:48:13">2018/10/18</span>
+        </a>
+        
+        <a  class="Learn "
+           href="/2018/09/12/automateDeploymentInGithub/"
+           data-tag="GitHub,部署"
+           data-author="" >
+            <span class="post-title" title="对GitHub的项目自动部署">对GitHub的项目自动部署</span>
+            <span class="post-date" title="2018-09-12 16:36:02">2018/09/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/12/22/deployDjangoInCentOS/"
+           data-tag="Django,CentOS"
+           data-author="" >
+            <span class="post-title" title="在CentOS上部署Django项目">在CentOS上部署Django项目</span>
+            <span class="post-date" title="2018-12-22 19:26:19">2018/12/22</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/25/djangoConnectMysql/"
+           data-tag="Mysql,Python3"
+           data-author="" >
+            <span class="post-title" title="Django1.11连接Mysql的问题-Python3安装mysqlclient">Django1.11连接Mysql的问题-Python3安装mysqlclient</span>
+            <span class="post-date" title="2018-10-25 18:34:32">2018/10/25</span>
+        </a>
+        
+        <a  class="Learn "
+           href="/2018/09/11/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2018-09-11 19:17:31">2018/09/11</span>
+        </a>
+        
+        <a  class="Learn "
+           href="/2018/09/12/hexoBlog/"
+           data-tag="博客搭建,Hexo"
+           data-author="" >
+            <span class="post-title" title="关于Hexo博客的搭建与使用">关于Hexo博客的搭建与使用</span>
+            <span class="post-date" title="2018-09-12 15:59:12">2018/09/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/04/manyGitAccount/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git多账号使用">Git多账号使用</span>
+            <span class="post-date" title="2019-09-04 19:53:12">2019/09/04</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/25/mysql80ChangePwdType/"
+           data-tag="mysql,随笔"
+           data-author="" >
+            <span class="post-title" title="Mysql 8.0修改Root账号的加密模式">Mysql 8.0修改Root账号的加密模式</span>
+            <span class="post-date" title="2018-10-25 17:41:15">2018/10/25</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/17/mediaCodingFormat/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="mediaCodingFormat">mediaCodingFormat</span>
+            <span class="post-date" title="2018-10-17 23:08:04">2018/10/17</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/20/mysql8Install/"
+           data-tag="Mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql 8.0 Server Install Fail">Mysql 8.0 Server Install Fail</span>
+            <span class="post-date" title="2018-10-20 11:28:29">2018/10/20</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/21/nextClouldInstall/"
+           data-tag="nextClould"
+           data-author="" >
+            <span class="post-title" title="个人网盘nextClould部署">个人网盘nextClould部署</span>
+            <span class="post-date" title="2018-10-21 08:43:20">2018/10/21</span>
+        </a>
+        
+        <a  class="Learn "
+           href="/2018/09/11/openSource/"
+           data-tag="开源协议"
+           data-author="" >
+            <span class="post-title" title="开源协议">开源协议</span>
+            <span class="post-date" title="2018-09-11 22:23:22">2018/09/11</span>
+        </a>
+        
+        <a  class=""
+           href="/2018/10/13/ubuntuInstallInDoubleGpu/"
+           data-tag="ubuntu"
+           data-author="" >
+            <span class="post-title" title="安装Ubuntu的一些坑">安装Ubuntu的一些坑</span>
+            <span class="post-date" title="2018-10-13 22:29:48">2018/10/13</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-nextClouldInstall" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">个人网盘nextClould部署</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a class="color1">nextClould</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-10-21 22:37:50'>2018-10-21 08:43</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:635</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-安装Apache2"><span class="toc-text">一、 安装Apache2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、安装MariaDB"><span class="toc-text">二、安装MariaDB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、安装PHP及其他模块"><span class="toc-text">三、安装PHP及其他模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、安装phpMyAdmin"><span class="toc-text">四、安装phpMyAdmin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、配置Apache"><span class="toc-text">五、配置Apache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、下载nextcloud"><span class="toc-text">六、下载nextcloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、可能遇到的问题"><span class="toc-text">七、可能遇到的问题</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、-安装Apache2"><a href="#一、-安装Apache2" class="headerlink" title="一、 安装Apache2"></a>一、 安装Apache2</h2><p><code>sudo apt-get install apache2</code><br>安装完成后，浏览器访问:<a href="http://ipAddr/" target="_blank" rel="noopener">http://ipAddr/</a> 出现It works!网页表示安装成功。</p>
+<p>修改状态：<code>service apache2 status|start|stop|restart</code><br>站点目录：/var/www/<br>修改权限：sudo chmod 777 /var/www<br>安装目录：/etc/apache2/<br>全局配置：/etc/apache2/apache2.conf<br>监听端口：/etc/apache2/ports.conf<br>虚拟主机：/etc/apache2/sites-enabled/000-default.conf</p>
+<h2 id="二、安装MariaDB"><a href="#二、安装MariaDB" class="headerlink" title="二、安装MariaDB"></a>二、安装MariaDB</h2><p><code>sudo apt-get install mariadb-server mariadb-client</code><br>启动MariaDB服务：<code>sudo systemctl start mysql</code><br>查看状态：<code>sudo systemctl status mysql</code><br>重启服务：<code>service mysql restart</code><br>查看监听端口的情况：<code>netstat -tunpl</code> 或 <code>netstat -tap</code><br>执行初始化安全脚本，默认root密码为空，设置root密码和其他选项：<code>sudo mysql_secure_installation</code><br>为NextCloud创建数据库和用户<br>创建数据库nextcloud，用户名nextcloud，密码XXXXXXXX</p>
+<p><code>sudo mysql -u root -p</code><br>进入MariaDB后，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#创建数据库，名为：nextcloud</span><br><span class="line">CREATE DATABASE nextcloud;</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON nextcloud.* TO &apos;nextcloud&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;XXXXXXXX&apos;;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line">#退出</span><br><span class="line">\q</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、安装PHP及其他模块"><a href="#三、安装PHP及其他模块" class="headerlink" title="三、安装PHP及其他模块"></a>三、安装PHP及其他模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.2</span><br><span class="line"></span><br><span class="line">sudo apt-get install apache2 mariadb-server libapache2-mod-php7.2</span><br><span class="line">sudo apt-get install php7.2-gd php7.2-json php7.2-mysql php7.2-curl php7.2-mbstring</span><br><span class="line">sudo apt-get install php7.2-intl php7.2-mcrypt php-imagick php7.2-xml php7.2-zip</span><br></pre></td></tr></table></figure>
+<p>测试：<code>php7.2 -v</code><br>重启服务：<code>service apache2 restart</code><br>测试Apache能否解析PHP<br>执行<code>sudo nano /var/www/html/phpinfo.php</code><br>文件中写：&lt;?php echo phpinfo();?&gt;<br>浏览器访问:<a href="http://ipAddr/phpinfo.php" target="_blank" rel="noopener">http://ipAddr/phpinfo.php</a>  出现PHP Version网页</p>
+<h2 id="四、安装phpMyAdmin"><a href="#四、安装phpMyAdmin" class="headerlink" title="四、安装phpMyAdmin"></a>四、安装phpMyAdmin</h2><p><code>sudo apt-get install phpmyadmin</code><br>安装：选择apache2，点击确定。下一步选择是要配置数据库，并输入密码。<br>创建phpMyAdmin快捷方式：<code>sudo ln -s /usr/share/phpmyadmin /var/www/html</code><br>启用Apache mod_rewrite模块：<code>sudo a2enmod rewrite</code><br>重启服务：<code>service php7.2-fpm restart &amp; service apache2 restart</code><br>测试：浏览器访问:<a href="http://ipAddr/phpmyadmin" target="_blank" rel="noopener">http://ipAddr/phpmyadmin</a></p>
+<h2 id="五、配置Apache"><a href="#五、配置Apache" class="headerlink" title="五、配置Apache"></a>五、配置Apache</h2><p><code>nano /etc/apache2/apache2.conf</code><br>在最后面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-httpd-php .php .htm .html</span><br><span class="line">AddDefaultCharset UTF-8</span><br></pre></td></tr></table></figure></p>
+<p>然后重启Apache服务。<br>　　到此为止，web站点其实已经搭建起来了，只需在/var/www/html目录下存放网页文件，电脑主机就可以访问服务器了，<a href="http://ip/xxx.html" target="_blank" rel="noopener">http://ip/xxx.html</a></p>
+<h2 id="六、下载nextcloud"><a href="#六、下载nextcloud" class="headerlink" title="六、下载nextcloud"></a>六、下载nextcloud</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html</span><br><span class="line">wget https://download.nextcloud.com/server/releases/nextcloud-13.0.5.zip</span><br><span class="line">unzip nextcloud-13.0.5.zip</span><br><span class="line">rm nextcloud-13.0.5.zip</span><br></pre></td></tr></table></figure>
+<p>接下来只需要在电脑主机的浏览器上输入:<a href="http://ip/nextcloud" target="_blank" rel="noopener">http://ip/nextcloud</a> 就可以正常访问了。</p>
+<h2 id="七、可能遇到的问题"><a href="#七、可能遇到的问题" class="headerlink" title="七、可能遇到的问题"></a>七、可能遇到的问题</h2><p>1.缺少权限<br>如果出现下面的画面，说明你没有给nextcloud目录权限：</p>
+<p>缺少权限</p>
+<p>解决方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html</span><br><span class="line">chown www-data nextcloud -Rf</span><br><span class="line">chmod 770 nextcloud -Rf</span><br></pre></td></tr></table></figure></p>
+<p>2.刷新浏览器出现：<br>PHP cURL模块未安装<br>解决方法：</p>
+<p><code>sudo apt-get install libcurl3 php7.2-curl</code></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源, 有任何问题可以在下面评论区评论，或发送邮件至 mrtjming@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>个人网盘nextClould部署</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">635</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="Mr.Tan">Mr.Tan</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-10-21, 08:43:20</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-21, 22:37:50</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/21/nextClouldInstall/" title="个人网盘nextClould部署">https://mrtjming.github.io/2018/10/21/nextClouldInstall/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017-2020</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#HTTP权威指南','#书籍','#Git','#版本管理','#大数据','#Hadoop','#Sping Boot','#Java','#计网试验','#HTTP','#代理','#DNS','#网络','#Jekyll','#博客搭建','#Linux','#GitHub','#部署','#Django','#CentOS','#Mysql','#Python3','#Hexo','#mysql','#随笔','#nextClould','#开源协议','#ubuntu',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #616161;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://github.com/Mrtjming">github</a>
+    
+</div>
+
+
+</html>
